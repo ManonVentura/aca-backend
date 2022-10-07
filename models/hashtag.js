@@ -1,14 +1,11 @@
 const mongoose = require('mongoose');
 
+
 const hashtagSchema = mongoose.Schema({
  
-    model Hashtag {
-       
-
-
-        
-      }
-
+       hashtag: String,
+      tweet: {type: mongoose.Schema.ObjectId, ref: 'tweet'},
+      
 });
 
 const hashtag = mongoose.model('hashtag', hashtagSchema);
