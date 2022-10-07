@@ -8,7 +8,6 @@ const uid2=require('uid2');
 const token =uid2(32)
 var router = express.Router();
 
-
 router.post('/', (req, res) => {
     if (!checkBody(req.body, ['content'])) {
       res.json({ result: false, error: 'Missing or empty fields' });
@@ -47,7 +46,6 @@ router.get('/lasttweets', (req, res) => {
   });
 });
 
-
 //route update -> ajouter un like <3
 
 router.put('/addlike', (req,res) => {
@@ -60,7 +58,6 @@ router.put('/addlike', (req,res) => {
     })
   })
 })
-
 
 
 module.exports = router;
